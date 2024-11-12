@@ -19,11 +19,10 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
   
-  /* Header Styles */
   h1 {
     font-size: 48px;
     text-transform: uppercase;
-    color: #f97c3b; /* Orange color for the header */
+    color: #f97c3b; 
     text-align: center;
     margin-bottom: 40px;
   }
@@ -44,19 +43,18 @@
     margin-bottom: 20px;
   }
   
-  /* Align menu container to the center */
   .menu-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    flex-wrap: wrap;  /* Allow items to wrap if necessary */
+    flex-wrap: wrap;  
   }
   
   /* Pizza Grid Section */
   .pizza-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     gap: 30px;
     width: 100%;
   }

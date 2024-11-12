@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import pizzaData from './data.js';  // Import pizzaData
+import pizzaData from './data.js';  
 
-// App component: Contains Header, Menu, and Footer components
 function App() {
     return (
         <div className="container">
@@ -14,7 +13,6 @@ function App() {
     );
 }
 
-// Header component: Displays the name of the pizza company
 function Header() {
     return (
         <h1 style={{ color: "orange", fontSize: "48px", textTransform: "uppercase", textAlign: "center" }}>
@@ -23,7 +21,6 @@ function Header() {
     );
 }
 
-// Menu component: Renders a list of pizzas from pizzaData
 function Menu() {
     return (
         <div className="menu">
@@ -46,7 +43,6 @@ function Menu() {
     );
 }
 
-// Pizza component: Displays pizza details
 function Pizza({ name, ingredients, price, image, soldOut }) {
     return (
         <div className="pizza">
@@ -62,7 +58,6 @@ function Pizza({ name, ingredients, price, image, soldOut }) {
     );
 }
 
-// Footer component: Displays whether the store is open or closed
 function Footer() {
     const currentHour = new Date().getHours();
     const isOpen = currentHour >= 10 && currentHour < 22;
@@ -78,6 +73,5 @@ function Footer() {
     );
 }
 
-// Rendering the App component to the root div
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
