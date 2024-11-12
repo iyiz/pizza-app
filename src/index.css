@@ -1,13 +1,160 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styles */
+  h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #f97c3b; /* Orange color for the header */
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Menu Section */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .menu h2 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Align menu container to the center */
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;  /* Allow items to wrap if necessary */
+  }
+  
+  /* Pizza Grid Section */
+  .pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    width: 100%;
+  }
+  
+  .pizza-grid .pizza {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .pizza-grid .pizza:hover {
+    transform: scale(1.05);
+  }
+  
+  .pizza-grid .pizza img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  
+  .pizza-grid .pizza h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  .pizza-grid .pizza p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .pizza-grid .pizza .sold-out {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+  
+  .order-button {
+    background-color: #f97c3b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-button:hover {
+    background-color: #d5661d;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .pizza-grid {
+      grid-template-columns: 1fr 1fr;  /* 2 columns for medium screens */
+    }
+  
+    .pizza-grid .pizza h3 {
+      font-size: 20px;
+    }
+  
+    .pizza-grid .pizza p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pizza-grid {
+      grid-template-columns: 1fr;  /* 1 column for small screens */
+    }
+  
+    .pizza-grid .pizza h3 {
+      font-size: 18px;
+    }
+  
+    .pizza-grid .pizza p {
+      font-size: 14px;
+    }
+  
+    .order-button {
+      font-size: 16px;
+    }
+  }
+  
